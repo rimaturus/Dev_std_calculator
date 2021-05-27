@@ -143,7 +143,7 @@ int main(){
 		scanf("%lf*10^%lf", &ds1, &eds1);
 		eds1 = exp_sci(eds1);;
 		
-		cout << "Inserire la deviazione std di x2:	ds1*10^N\t";
+		cout << "Inserire la deviazione std di x2:	ds2*10^N\t";
 		scanf("%lf*10^%lf", &ds2, &eds2);
 		eds2 = exp_sci(eds2);
 		
@@ -173,7 +173,7 @@ int main(){
 		scanf("%lf*10^%lf", &ds1, &eds1);
 		eds1 = exp_sci(eds1);;
 		
-		cout << "Inserire la deviazione std di x2:	ds1*10^N\t";
+		cout << "Inserire la deviazione std di x2:	ds2*10^N\t";
 		scanf("%lf*10^%lf", &ds2, &eds2);
 		eds2 = exp_sci(eds2);
 		
@@ -181,8 +181,10 @@ int main(){
 		r1 = r1*r1;
 		double r2 = ds2*eds2;
 		r2 = r2*r2;
+		
+		r2 = (r1+r2)/2;
 
-		dev_std_res = sqrt((r1+r2)/2);
+		dev_std_res = sqrt(r2);
 		double sum = (x1*ex1+x2*ex2);
 		
 		cout << "Risultato operazione\t";
@@ -203,7 +205,7 @@ int main(){
 		scanf("%lf*10^%lf", &ds1, &eds1);
 		eds1 = exp_sci(eds1);;
 		
-		cout << "Inserire la deviazione std di x2:	ds1*10^N\t";
+		cout << "Inserire la deviazione std di x2:	ds2*10^N\t";
 		scanf("%lf*10^%lf", &ds2, &eds2);
 		eds2 = exp_sci(eds2);
 		
@@ -260,6 +262,7 @@ int main(){
 		stampa_sci(dev_std_res);
 	}
 	
-	
+	cout << endl;
+	system("pause");
 	return 0;
 }
